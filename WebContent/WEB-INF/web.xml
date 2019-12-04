@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>resumefinderapp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>UploadResume</servlet-name>
+    <jsp-file>/UploadForm.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UploadResume</servlet-name>
+    <url-pattern>/upload1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SearchResume</servlet-name>
+    <jsp-file>/SearchPage.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SearchResume</servlet-name>
+    <url-pattern>/search1</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>Download</servlet-name>
+    <jsp-file>/Download.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Download</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <description>Location to store uploaded files</description>
+  <param-name>file-upload</param-name>
+  <param-value>D:\\resume</param-value>
+  </context-param>
+</web-app>
